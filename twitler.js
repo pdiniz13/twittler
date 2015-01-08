@@ -9,26 +9,26 @@ $(document).ready(function(){
         var index = streams.home.length - 1;
         while(index >= 0){
             var tweet = streams.home[index];
-            var $tweet = $('<ul></ul>');
-            $tweet.append('<li>@' + '<span class="tweetUser">' + tweet.user + '</span>' + ': ' + tweet.message+"</li>");
-            $tweet.append('<li>Tweeted at: ' + tweet.created_at+"</li>");
+            var $tweet = $('<div class="tweet"></div>');
+            $tweet.append('<div class="header">@' + tweet.user + '</div><div class="time">-' + tweet.created_at +'</div>');
+            $tweet.append('<div class="message">' + tweet.message + '</div>');
             $tweet.appendTo('.tweets');
             index -= 1;
         }
     }
     function displayUserTweets(thisUser){
-        var user = thisUser.text();
+        var user = thisUser.text().slice(1);
         console.log(thisUser);
         $('.tweets').html('');
-        $('<h3 class="check">Tweets by: '+ user +'</h3>').appendTo('.tweets');
         var count = streams.users[user].length;
         for (var x = 0; x<count; x++){
             var tweet = streams.users[user][x];
-            var $tweet = $('<ul></ul>');
-            $tweet.append('<li>'+tweet.message+'</li>');
-            $tweet.append('<li>Tweeted at: ' + tweet.created_at+'</li>');
+            var $tweet = $('<div class="tweet"></div>');
+            $tweet.append('<div class="header">@' + tweet.user + '</div><div class="time">-' + tweet.created_at +'</div>');
+            $tweet.append('<div class="message">' + tweet.message + '</div>');
             $tweet.prependTo('.tweets');
         }
+        $('<h3 class="check">Tweets by: '+ user +'</h3>').prependTo('.tweets');
         $(".goBack").show();
         $body.on('click.back', '.goBack', function(e){
             e.preventDefault();
@@ -55,7 +55,7 @@ $(document).ready(function(){
         e.stopPropagation();
         displayTweets();
     });
-    $body.on("click.user", ".tweetUser", function(e){
+    $body.on("click.user", ".header", function(e){
         e.preventDefault();
         e.stopPropagation();
         displayUserTweets($(this));

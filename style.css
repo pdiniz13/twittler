@@ -1,3 +1,49 @@
+#box{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 2%;
+    border: 2px solid;
+}
+
+#buttonBox{
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1%;
+}
+
+button{
+    cursor: pointer; cursor: hand;
+}
+
+.header{
+    cursor: pointer; cursor: hand;
+}
+
+.tweet {
+    border: 1px solid;
+    padding: 5px;
+    margin: 1px;
+}
+
+.header {
+    font-weight: bold;
+    display:inline;
+}
+.time {
+    opacity: 0.3;
+    display: inline;
+}
+
 .goBack {
     display: none;
+}
+.time {
+	list-style-type: none;
+	text-indent: 50px;
+
 }
