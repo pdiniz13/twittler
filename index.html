@@ -7,11 +7,22 @@
     <script src="twitler.js"></script>
   </head>
   <body>
-  <h1 id="tweetHeader">Twitler</h1>
+    <div id="displayBlock">
+      <img src="http://farm8.static.flickr.com/7488/16103913522_f6849f664b_m.jpg" style="width:120px;height:90px" alt="Bird Picture">
+      <h1 id="tweetHeader">Twitler</h1>
+    </div>
   <div id="buttonBox">
     <button class="refresh">Refresh</button>
     <button class="goBack">Go Back</button>
   </div>
+    <div id="create">
+      <form>
+        <input class="input" type="text" name="username" placeholder="username"><br>
+        <textarea name="newTweet" value="newTweet"></textarea><br>
+        <button formaction="submit">Submit</button>
+
+      </form>
+    </div>
     <div id="box">
       <div class="tweets"></div>
     </div>

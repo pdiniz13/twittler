@@ -1,8 +1,17 @@
+body{
+    text-align: center;
+}
+
 #box{
     margin-left: 30%;
+    position: relative;
     margin-right: 30%;
-    margin-top: 2%;
+    margin-top: 1%;
     border: 2px solid;
+    border-radius: 20px;
+    padding: 1%;
+    background-color:rgba(0,255,255,0.1);
+    text-align: left;
 }
 
 #buttonBox{
@@ -11,9 +20,43 @@
     margin-bottom: 0;
 }
 
+#displayBlock{
+    display: inline;
+}
+
+#create{
+    margin-left:30%;
+    margin-right:30%;
+    text-align:left;
+    display:none;
+}
+
+img{
+    display: inline;
+}
+
 h1 {
-    text-align: center;
-    margin-top: 1%;
+    font-family: "Pico", "Times", serif;
+    color: rgb(64,153,255);
+    display:inline;
+}
+
+input{
+    border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+textarea{
+	width: 600px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-position: bottom right;
+	background-repeat: no-repeat;
 }
 
 button{
@@ -27,7 +70,9 @@ button{
 .tweet {
     border: 1px solid;
     padding: 5px;
-    margin: 1px;
+    margin: 2%;
+    border-radius: 10px;
+    background-color:white;
 }
 
 .header {
